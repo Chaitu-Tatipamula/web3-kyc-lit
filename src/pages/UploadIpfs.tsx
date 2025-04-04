@@ -21,7 +21,7 @@ function UploadFile() {
   const [decrypted , setDecrypted] = useState("");
   const [uploadMethod, setUploadMethod] = useState<'lighthouse' | 'storacha'>('lighthouse');
   const [storachaLoading, setStorachaLoading] = useState(false);
-  const [storachaCid, setStorachaCid] = useState<string>('');
+  // const [storachaCid, setStorachaCid] = useState<string>('');
 
   // @ts-ignore
   const progressCallback = (progressData) => {
@@ -56,7 +56,7 @@ function UploadFile() {
         const storachaUrl = `https://w3s.link/ipfs/${cid}`;
         console.log('File is at :', storachaUrl);
         setUrl(storachaUrl);
-        setStorachaCid(cid.toString());
+        // setStorachaCid(cid.toString());
         
         toast.success("File uploaded to Storacha", {
           position: "bottom-center"
